@@ -17,7 +17,14 @@ const style = {
     transform: 'translate(-50%, -50%)'
 };
 
-const ResponseModal = ({ modalOpen, setModalOpen, response, loading }) => {
+type ResponseModalProps = {
+    modalOpen: boolean;
+    setModalOpen: (value: boolean) => void;
+    response: string;
+    loading: boolean;
+}
+
+const ResponseModal = ({ modalOpen, setModalOpen, response, loading }: ResponseModalProps) => {
 
     const handleModalClose = () => setModalOpen(false);
 
